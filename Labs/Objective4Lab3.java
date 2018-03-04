@@ -15,7 +15,7 @@ public class Objective4Lab3 {
         System.out.println("Your number is positive" );
       }
       else{
-        System.out.println("Your number is 0" );
+        System.out.println("Your number is 0" );  
       }
 
       scanner.close();
