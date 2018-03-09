@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class MakeChange {
@@ -25,42 +24,43 @@ public class MakeChange {
 
     else if(money > price) {
       double change = money - price;
-		      while (change > 0) {
-			       System.out.println("Here is your change in" );
-			          if (change >= 20.00) {
-				              System.out.println("Twenty Dollar Bills");
-				              change -= 20.00;
-			           }
-			           else if (change >= 10.00) {
-				               System.out.println("Ten Dollar Bills");
-				               change -= 10.00;
-			           }
-			           else if (change >= 5.00) {
-				               System.out.println("Five Dollar Bills");
-				               change -= 5.00;
-			           }
-			           else if (change >= 1.00) {
-				               System.out.println("One Dollar Bills");
-				               change -= 1.00;
-			           }
-			           else if (change >= .25) {
-				               System.out.println("Quarters");
-				               change -= .25;
-			           }
-			           else if (change >= .10) {
-				               System.out.println("Dimes");
-				               change -= .10;
-			           }
-			           else if (change >= .05) {
-				               System.out.println("Nickels");
-				               change -= .05;
-			           }
-			           else if (change >= .01) {
-				               System.out.println("Pennies");
-				               change -= .01;
-			           }
-                }
-              }
-	}
 
+
+      int finChange = (int)Math.round(change * 100);
+      System.out.println("Here is your change in ");
+
+      int twenties = finChange / 2000;
+      finChange = finChange % 2000;
+      System.out.println(twenties + " Twenties");
+      int tens = finChange / 1000;
+      finChange = finChange % 1000;
+      System.out.println(tens + " Tens");
+      int fives = finChange / 500;
+      finChange = finChange % 500;
+      System.out.println(fives + " Fives");
+      int ones = finChange / 100;
+      finChange = finChange % 100;
+      System.out.println(ones + " Ones" );
+      int quarter = finChange / 25;
+      finChange = finChange % 25;
+      System.out.println(quarter + " Quarters");
+      int dime = finChange / 10;
+      finChange = finChange % 10;
+      System.out.println(dime + " Dimes");
+      int nickel = finChange / 5;
+      finChange = finChange % 5;
+      System.out.println(nickel + " Nickels");
+      int penny = finChange / 1;
+      finChange = finChange % 1;
+      System.out.println(penny + " Pennies");
+
+
+    }
+
+
+
+
+
+
+ }
 }
